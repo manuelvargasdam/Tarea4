@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/guide3Bubble"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bubble_background"
+    android:padding="16dp"
+    android:visibility="gone"
+    android:elevation="8dp">
+
+    <!-- Texto del bocadillo -->
+    <TextView
+        android:id="@+id/bubble3Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aquí podrás ver todos los coleccionables del mundo de Spyro."
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:maxWidth="200dp" />
+
+
+
+</LinearLayout>
+

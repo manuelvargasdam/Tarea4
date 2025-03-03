@@ -1,0 +1,210 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Contenedor principal de la interfaz -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- El ConstraintLayout es el contenido principal -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Toolbar como ActionBar -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/colorPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- NavHostFragment para manejar la navegación entre fragmentos -->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/navHostFragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:defaultNavHost="true"
+                app:layout_constraintBottom_toTopOf="@id/navView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                app:navGraph="@navigation/nav_graph" />
+
+            <!-- BottomNavigationView para la navegación inferior -->
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/navView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:menu="@menu/bottom_nav_menu" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Guía (que se superpone sobre el contenido) -->
+        <include
+            android:id="@+id/includeLayout"
+            layout="@layout/guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+
+        <include
+            android:id="@+id/excludeLayout"
+            layout="@layout/finalized"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/guideBackLayout"
+            layout="@layout/fondo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" /> <!-- Se oculta por defecto -->
+
+
+
+        <Button
+            android:id="@+id/step1Guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="70dp"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:textColor="@color/purple"
+            android:visibility="gone"/>
+
+
+        <Button
+            android:id="@+id/step2Guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="235dp"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:textColor="@color/purple"
+            android:visibility="gone"/>
+
+
+        <Button
+            android:id="@+id/step3Guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="70dp"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:textColor="@color/purple"
+            android:visibility="gone"/>
+
+
+        <Button
+            android:id="@+id/step4Guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="635dp"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:textColor="@color/purple"
+            android:visibility="gone"/>
+
+
+
+        <!-- Botón de "Saltar guía" en la parte superior derecha -->
+        <Button
+            android:id="@+id/exit_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saltar guía"
+            android:layout_gravity="center|end"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:textColor="@color/purple"
+            android:visibility="gone"/>
+
+
+        <!-- Bocadillo informativo -->
+        <include
+            android:id="@+id/guideBubble"
+            layout="@layout/guide_bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/guideBubble2"
+            layout="@layout/guide_bubble2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/guideBubble3"
+            layout="@layout/guide_bubble3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/guideBubble4"
+            layout="@layout/guide_bubble4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <!-- Flecha -->
+        <include
+            android:id="@+id/arrowBelow"
+            layout="@layout/arrow_below"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/arrowBelow2"
+            layout="@layout/arrow_below"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <!-- Menú de navegación lateral -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/navDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginTop="56dp" />
+</androidx.drawerlayout.widget.DrawerLayout>

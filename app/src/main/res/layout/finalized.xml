@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lila_transparent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/guideExclude"
+    android:visibility="gone">
+
+    <!-- Texto "Bienvenido" -->
+    <TextView
+        android:id="@+id/textStep5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fin de la guía¡"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Descripción de la aplicación -->
+    <TextView
+        android:id="@+id/textDescription5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Esto ha sido todo de esta guia\n\nRecordemos los pasos\n\n-Paso 1: Aquí podrás explorar a todos los personajes del mundo de Spyro.\n\n-Paso 1: Aquí podrás explorar a todos los personajes del mundo de Spyro.\n\n-Paso 1: Aquí podrás explorar a todos los personajes del mundo de Spyro.\n\n-Paso 4: Aquí podrás explorar a todos los personajes del mundo de Spyro.\n\n"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="10dp" />
+
+    <ImageView
+        android:id="@+id/ripto"
+        android:layout_width="150dp"
+         android:layout_height="150dp"
+        android:src="@drawable/ripto"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/botonFinalizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar App"
+        android:textColor="@color/white"
+        android:background="@drawable/button_normal"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp"
+        android:padding="20dp" />
+
+
+</LinearLayout>

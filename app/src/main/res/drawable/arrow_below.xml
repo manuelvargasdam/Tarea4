@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="140dp"
+    android:viewportWidth="120"
+    android:viewportHeight="140">
+
+    <!-- Cuerpo de la flecha (más largo) -->
+    <path
+        android:fillColor="#C8A2C8"
+        android:strokeColor="#C8A2C8"
+        android:strokeWidth="4"
+        android:pathData="M60,0 L60,100" />
+
+    <!-- Punta de la flecha (ajustada a la nueva posición) -->
+    <path
+        android:fillColor="#C8A2C8"
+        android:pathData="M50,100 L60,115 L70,100 Z" />
+</vector>
