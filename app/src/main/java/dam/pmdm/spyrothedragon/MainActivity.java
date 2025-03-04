@@ -337,7 +337,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Si es la primera vez, mostramos la guía
-        if (true) {
+        if (isFirstTime) {
             // Guardamos 'false' para que no se muestre la guía en el futuro
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putBoolean("ISFIRSTTIME", false);
