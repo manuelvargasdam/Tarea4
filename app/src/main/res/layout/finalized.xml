@@ -29,7 +29,7 @@
         android:id="@+id/textDescription5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Esto ha sido todo de esta guia\n\nRecordemos los pasos\n\n-Paso 1: Aquí podrás explorar a todos los personajes del mundo de Spyro.\n\n-Paso 1: Aquí podrás explorar a todos los personajes del mundo de Spyro.\n\n-Paso 1: Aquí podrás explorar a todos los personajes del mundo de Spyro.\n\n-Paso 4: Aquí podrás explorar a todos los personajes del mundo de Spyro.\n\n"
+        android:text="Esto ha sido todo de esta guia\n\nRecordemos los pasos\n\n-Paso 1: Aquí podrás explorar a todos los personajes del mundo de Spyro.\n\n-Paso 12 Aquí podrás explorar a todos los mundos del mundo de Spyro.\n\n-Paso 3: Aquí podrás explorar a todos los coleccionables del mundo de Spyro.\n\n-Paso 4: Aquí podrás explorar y conocer información de la aplicación.\n\n"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:gravity="center"
